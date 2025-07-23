@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lucía Biasutto | Portafolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <section class="hero">
+    <img src="lucia.png" alt="Lucía Biasutto" class="perfil" />
+    <h1>Lucía Biasutto</h1>
+    <p>Analista de Software | Desarrolladora Web | Estudiante de Ingeniería en Software</p>
+    <p class="contacto">
+      luubiasutto@gmail.com · <a href="https://github.com/luciabiasutto" target="_blank">GitHub</a> · <a href="https://www.linkedin.com/in/lucia-biasutto/" target="_blank">LinkedIn</a> · <a href="https://wa.me/3513911557" target="_blank">WhatsApp</a>
+    </p>
+  </section>
+
+  <section class="bloque">
+    <h2>Educación</h2>
+    <ul>
+      <li><strong>Universidad Siglo 21</strong> — Ingeniería en Software (2022 - Presente)</li>
+      <li><strong>Udemy</strong> — Curso React JS</li>
+      <li><strong>Academia Integral Capacitado</strong> — Curso Programación Orientado a Objetos</li>
+    </ul>
+  </section>
+
+  <section class="bloque">
+    <h2>Proyectos Destacados</h2>
+    <div class="proyecto">
+        <h3>App de Gestión de Turnos Médicos</h3>
+        <p>Desarrollada en WordPress desde cero. Participé en el diseño, implementación y mantenimiento.</p>
+        <a href="#ilustracion" onclick="mostrarIlustracion(event)">Ver ilustración</a>
+    </div>
+    <div class="proyecto">
+      <h3>Landing Page de Billetera Virtual</h3>
+      <p>El stack tecnológico utilizado fue Python(FastAPI), JavaScript(React.js), MySQL, protocolo HTTPS</p>
+      <a href="https://uxcapital.la/" target="_blank">Ver sitio</a>
+    </div>
+    <div class="proyecto">
+      <h3>Testing de App "Aliados"</h3>
+      <p>Testing de aplicación para gestión de productos en restaurantes. Participé en pruebas funcionales.</p>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <h2>Experiencia</h2>
+    <h3>High Impact S.A.S — Pasante</h3>
+    <p>Colaboré en el desarrollo de una landing page y pruebas funcionales de una app. Aprendí metodologías ágiles, control de versiones y documentación de procesos.</p>
+  </section>
+
+  <section class="bloque">
+    <h2>Habilidades</h2>
+    <div class="habilidades">
+      <ul>
+        <li>JavaScript</li>
+        <li>Java</li>
+        <li>MySQL</li>
+        <li>Python</li>
+        <li>React.js</li>
+        <li>Node.js</li>
+        <li>Express.js</li>
+        <li>FastAPI</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Postman</li>
+        <li>WordPress</li>
+        <li>Paquetes Office</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Lucía Biasutto — luubiasutto@gmail.com</p>
+  </footer>
+
+  <!-- Pantalla de Ilustración -->
+  <section id="ilustracion" class="pantalla-ilustracion" style="display: none;">
+    <div class="contenido-ilustracion">
+      <h2>Ilustración del Proyecto</h2>
+      <img src="https://uxcapital.la/wp-content/uploads/2023/04/web-preview.jpg" alt="Ilustración" style="max-width: 100%; border-radius: 10px;">
+      <br><br>
+      <a href="#" class="btn-volver" onclick="cerrarIlustracion(event)">← Volver</a>
+    </div>
+  </section>
+
+  <!-- Script -->
+  <script>
+    function mostrarIlustracion(event) {
+      event.preventDefault();
+      document.getElementById('ilustracion').style.display = 'flex';
+      window.scrollTo(0, 0);
+    }
+
+    function cerrarIlustracion(event) {
+      event.preventDefault();
+      document.getElementById('ilustracion').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
+

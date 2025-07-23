@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #1c2833;
+    color: #fbe5e5;
+  }
+  
+  a {
+    color: #e232b3;
+    text-decoration: none;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #17202a;
+  }
+  
+  .hero h1 {
+    font-size: 3em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #fbe5e5;
+  }
+  
+  .hero p {
+    margin: 5px 0;
+    font-size: 1.1em;
+  }
+  
+  .contacto {
+    margin-top: 10px;
+  }
+  
+  .bloque {
+    background-color: #17202a;
+    margin: 30px auto;
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  }
+  
+  .bloque h2 {
+    color: #fbe5e5;
+    border-bottom: 2px solid #e232b3;
+    padding-bottom: 10px;
+  }
+  
+  .bloque ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .bloque li {
+    margin-bottom: 10px;
+  }
+  
+  .proyecto {
+    margin-bottom: 20px;
+  }
+  
+  .proyecto h3 {
+    color: #fbe5e5;
+    margin-bottom: 5px;
+  }
+  
+  .habilidades ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+    margin-top: 15px;
+  }
+  
+  .habilidades li {
+    background-color: #1c2833;
+    padding: 8px 15px;
+    border-radius: 8px;
+    color: #fbe5e5;
+    font-weight: bold;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    background-color: #17202a;
+    color: #e232b3;
+  }
+  
+  .perfil {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    margin-bottom: 15px;
+    animation: flotar 3s ease-in-out infinite;
+  }
+  
+  .pantalla-ilustracion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(28, 40, 51, 0.97);
+    color: #fbe5e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    padding: 20px;
+  }
+  
+  .contenido-ilustracion {
+    text-align: center;
+    max-width: 600px;
+  }
+  
+  .btn-volver {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #e232b3;
+    color: #fbe5e5;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  
+  @keyframes flotar {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
