@@ -8,34 +8,58 @@
 </head>
 <body>
 
-  <section class="hero">
+  <!-- Navegación -->
+  <nav class="navegacion">
+    <div class="nav-contenido">
+      <ul class="nav-menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#educacion">Educación</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#intereses">Intereses</a></li>
+        <li><a href="#objetivos">Objetivos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero" id="inicio">
     <img src="lucia.png" alt="Lucía Biasutto" class="perfil" />
     <h1>Lucía Biasutto</h1>
     <p>Analista de Software | Desarrolladora Web | Estudiante de Ingeniería en Software</p>
     <p class="contacto">
-      luubiasutto@gmail.com · <a href="https://github.com/luciabiasutto" target="_blank">GitHub</a> · <a href="https://www.linkedin.com/in/lucia-biasutto/" target="_blank">LinkedIn</a> · <a href="https://wa.me/3513911557" target="_blank">WhatsApp</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=luubiasutto@gmail.com" target="_blank">luubiasutto@gmail.com</a> · <a href="https://github.com/luciabiasutto" target="_blank">GitHub</a> · <a href="https://www.linkedin.com/in/lucia-biasutto/" target="_blank">LinkedIn</a> · <a href="https://wa.me/3513911557" target="_blank">WhatsApp</a>
     </p>
   </section>
 
-  <section class="bloque">
+  <section class="bloque" id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Apasionada por la tecnología y el desarrollo de software. Me encanta crear soluciones innovadoras y aprender nuevas tecnologías. Busco oportunidades para crecer profesionalmente en un entorno dinámico y colaborativo.</p>
+  </section>
+
+  
+
+  <section class="bloque" id="educacion">
     <h2>Educación</h2>
     <ul>
       <li><strong>Universidad Siglo 21</strong> — Ingeniería en Software (2022 - Presente)</li>
+      <li><strong>Universidad Siglo 21</strong> — Analista de Software (2022 - 2025)</li>
       <li><strong>Udemy</strong> — Curso React JS</li>
       <li><strong>Academia Integral Capacitado</strong> — Curso Programación Orientado a Objetos</li>
     </ul>
   </section>
 
-  <section class="bloque">
+  <section class="bloque" id="proyectos">
     <h2>Proyectos Destacados</h2>
     <div class="proyecto">
         <h3>App de Gestión de Turnos Médicos</h3>
-        <p>Desarrollada en WordPress desde cero. Participé en el diseño, implementación y mantenimiento.</p>
-        <a href="#ilustracion" onclick="mostrarIlustracion(event)">Ver ilustración</a>
+        <p>El stack tecnológico utilizado fue Python (FastAPI), JavaScript (React.js), MySQL, protocolo HTTPS.</p>
+        <a href="#ilustracion" onclick="mostrarIlustracion(event)">Ver  Informe</a>
     </div>
     <div class="proyecto">
       <h3>Landing Page de Billetera Virtual</h3>
-      <p>El stack tecnológico utilizado fue Python(FastAPI), JavaScript(React.js), MySQL, protocolo HTTPS</p>
+      <p>Desarrollada en WordPress desde cero. Participé en el diseño, implementación y mantenimiento.</p>
       <a href="https://uxcapital.la/" target="_blank">Ver sitio</a>
     </div>
     <div class="proyecto">
@@ -44,13 +68,13 @@
     </div>
   </section>
 
-  <section class="bloque">
+  <section class="bloque" id="experiencia">
     <h2>Experiencia</h2>
     <h3>High Impact S.A.S — Pasante</h3>
     <p>Colaboré en el desarrollo de una landing page y pruebas funcionales de una app. Aprendí metodologías ágiles, control de versiones y documentación de procesos.</p>
   </section>
 
-  <section class="bloque">
+  <section class="bloque" id="habilidades">
     <h2>Habilidades</h2>
     <div class="habilidades">
       <ul>
@@ -71,6 +95,20 @@
     </div>
   </section>
 
+  <section class="bloque" id="intereses">
+    <h2>Intereses</h2>
+    <ul>
+      <li>Inteligencia Artificial y Machine Learning.</li>
+      <li>Desarrollo de aplicaciones móviles.</li>
+      <li>Automatización de pruebas de software.</li>
+    </ul>
+  </section>
+  
+  <section class="bloque" id="objetivos">
+    <h2>Objetivos</h2>
+    <p>Busco oportunidades para desarrollarme como desarrolladora full-stack, especializándome en tecnologías modernas como React, Node.js y bases de datos SQL. Mi objetivo es contribuir a proyectos innovadores que generen impacto real.</p>
+  </section>
+
   <footer>
     <p>© 2025 Lucía Biasutto — luubiasutto@gmail.com</p>
   </footer>
@@ -78,8 +116,8 @@
   <!-- Pantalla de Ilustración -->
   <section id="ilustracion" class="pantalla-ilustracion" style="display: none;">
     <div class="contenido-ilustracion">
-      <h2>Ilustración del Proyecto</h2>
-      <img src="https://uxcapital.la/wp-content/uploads/2023/04/web-preview.jpg" alt="Ilustración" style="max-width: 100%; border-radius: 10px;">
+      <h2>Informe del Proyecto</h2>
+      <iframe src="informeSeminario.pdf" width="100%" height="85vh" style="border: none;"></iframe>
       <br><br>
       <a href="#" class="btn-volver" onclick="cerrarIlustracion(event)">← Volver</a>
     </div>
@@ -97,6 +135,29 @@
       event.preventDefault();
       document.getElementById('ilustracion').style.display = 'none';
     }
+
+    // Función para detectar elementos en el viewport
+    function observarElementos() {
+      const bloques = document.querySelectorAll('.bloque');
+      
+      const observador = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      bloques.forEach(bloque => {
+        observador.observe(bloque);
+      });
+    }
+
+    // Ejecutar cuando se carga la página
+    document.addEventListener('DOMContentLoaded', observarElementos);
   </script>
 
 </body>
