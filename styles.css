@@ -81,6 +81,20 @@ body {
     margin: 20px 15px;
     padding: 20px;
   }
+  
+  /* Ocultar iframe en móvil y mostrar fallback */
+  .contenido-ilustracion iframe {
+    display: none;
+  }
+  
+  .pdf-mobile-fallback {
+    display: block;
+  }
+  
+  .pdf-container {
+    height: auto;
+    min-height: 200px;
+  }
 }
 
 /* Para pantallas muy pequeñas */
@@ -227,6 +241,7 @@ body {
     justify-content: center;
     z-index: 999;
     padding: 0;
+    cursor: pointer; /* Indica que se puede hacer clic para cerrar */
   }
   
   .contenido-ilustracion {
@@ -239,10 +254,18 @@ body {
     max-width: 95vw;
     max-height: 95vh;
     padding: 0;
+    cursor: default; /* Evita que el contenido herede el cursor pointer */
   }
   
   .contenido-ilustracion h2 {
     margin-bottom: 10px;
+  }
+  
+  .pdf-container {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    margin-bottom: 20px;
   }
   
   .contenido-ilustracion iframe {
@@ -254,6 +277,20 @@ body {
     margin-bottom: 20px;
   }
   
+  .pdf-mobile-fallback {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(23, 32, 42, 0.8);
+    border-radius: 8px;
+    margin: 10px 0;
+  }
+  
+  .pdf-mobile-fallback p {
+    margin-bottom: 15px;
+    color: #fbe5e5;
+  }
+  
   .btn-volver {
     display: inline-block;
     margin-top: 20px;
@@ -262,6 +299,22 @@ body {
     color: #fbe5e5;
     border-radius: 8px;
     text-decoration: none;
+  }
+  
+  .btn-ver-pdf {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #e232b3;
+    color: #fbe5e5;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-ver-pdf:hover {
+    background-color: #c91e8a;
+    transform: translateY(-2px);
   }
   
   @keyframes flotar {
