@@ -1,3 +1,7 @@
+html {
+  scroll-padding-top: 80px; /* Ajusta este valor si tu menú tiene otra altura */
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
