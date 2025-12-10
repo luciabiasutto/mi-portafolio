@@ -53,6 +53,11 @@
   <section class="bloque" id="proyectos">
     <h2>Proyectos Destacados</h2>
     <div class="proyecto">
+        <h3>Plataforma Digital para la Localización de Puntos de Donación</h3>
+        <p>Plataforma digital desarrollada para mi tesis que permite localizar puntos de donación y reciclaje en la ciudad. Desarrollada con Java Spring Boot, React, MySQL y Leaflet.</p>
+        <a href="#demo-donaciones" onclick="mostrarDemoDonaciones(event)">Ver Demo</a>
+    </div>
+    <div class="proyecto">
         <h3>App de Gestión de Turnos Médicos</h3>
         <p>El stack tecnológico utilizado fue Python (FastAPI), JavaScript (React.js), MySQL, protocolo HTTPS.</p>
         <a href="#ilustracion" onclick="mostrarIlustracion(event)">Ver  Informe</a>
@@ -97,6 +102,7 @@
 
   <section class="bloque" id="intereses">
     <h2>Intereses</h2>
+    <ul>
       <li>Inteligencia Artificial y Machine Learning.</li>
       <li>Desarrollo de aplicaciones móviles.</li>
       <li>Automatización de pruebas de software.</li>
@@ -111,6 +117,74 @@
   <footer>
     <p>© 2025 Lucía Biasutto — luubiasutto@gmail.com</p>
   </footer>
+
+  <!-- Pantalla de Demo de Donaciones -->
+  <section id="demo-donaciones" class="pantalla-demo" style="display: none;">
+    <div class="contenido-demo" onclick="event.stopPropagation()">
+      <h2>Plataforma Digital para la Localización de Puntos de Donación</h2>
+      <div class="demo-info">
+        <!-- Sección de Video -->
+        <div class="demo-media">
+          <h3>Demo del Proyecto</h3>
+          <div class="media-container">
+            <!-- Video de YouTube -->
+            <iframe class="demo-video-embed" src="https://www.youtube.com/embed/5e6cR8nYS7A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            <!-- Alternativa: Si prefieres usar video local (no recomendado para GitHub por tamaño) -->
+            <!-- <video controls class="demo-video">
+              <source src="videoTesis.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de video.
+            </video> -->
+          </div>
+        </div>
+
+        <div class="demo-descripcion">
+          <h3>Descripción del Proyecto</h3>
+          <p>El proyecto tuvo como propósito desarrollar una plataforma digital que permitiera localizar puntos de donación y reciclaje en la ciudad, brindando a los usuarios la posibilidad de identificar fácilmente los lugares más cercanos donde realizar aportes solidarios o sustentables.</p>
+          <p>La iniciativa surgió ante la falta de información centralizada y accesible sobre centros de recolección, situación que dificultaba la participación ciudadana en acciones solidarias y ambientales.</p>
+        </div>
+        
+        <div class="demo-tecnologias">
+          <h3>Tecnologías Utilizadas</h3>
+          <div class="tech-grid">
+            <div class="tech-item">
+              <strong>Backend:</strong> Java Spring Boot
+            </div>
+            <div class="tech-item">
+              <strong>Frontend:</strong> React
+            </div>
+            <div class="tech-item">
+              <strong>Base de Datos:</strong> MySQL
+            </div>
+            <div class="tech-item">
+              <strong>Geolocalización:</strong> Leaflet
+            </div>
+            <div class="tech-item">
+              <strong>Metodología:</strong> Scrum
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-caracteristicas">
+          <h3>Características Principales</h3>
+          <ul>
+            <li>Visualización de puntos de donación y reciclaje en mapa interactivo</li>
+            <li>Sistema de filtrado por tipo de donación y ubicación</li>
+            <li>Gestión eficiente de puntos de donación</li>
+            <li>Integración de información de distintas organizaciones</li>
+            <li>Interfaz intuitiva para facilitar la participación ciudadana</li>
+          </ul>
+        </div>
+
+        <div class="demo-enlaces">
+          <!-- Reemplaza la URL con la de tu repositorio de GitHub -->
+          <a href="https://github.com/luciabiasutto/proyecto-tesis.git" target="_blank" class="btn-ver-pdf">Ver Código en GitHub</a>
+        </div>
+      </div>
+      <br>
+      <a href="#" class="btn-volver" onclick="cerrarDemoDonaciones(event)">← Volver</a>
+    </div>
+  </section>
 
   <!-- Pantalla de Ilustración -->
   <section id="ilustracion" class="pantalla-ilustracion" style="display: none;">
@@ -133,6 +207,20 @@
 
   <!-- Script -->
   <script>
+    function mostrarDemoDonaciones(event) {
+      event.preventDefault();
+      document.getElementById('demo-donaciones').style.display = 'flex';
+      window.scrollTo(0, 0);
+      
+      // Agregar event listener para cerrar al hacer clic fuera
+      document.getElementById('demo-donaciones').addEventListener('click', cerrarDemoDonaciones);
+    }
+
+    function cerrarDemoDonaciones(event) {
+      event.preventDefault();
+      document.getElementById('demo-donaciones').style.display = 'none';
+    }
+
     function mostrarIlustracion(event) {
       event.preventDefault();
       document.getElementById('ilustracion').style.display = 'flex';

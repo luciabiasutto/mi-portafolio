@@ -1,0 +1,9 @@
+# Archivos de video grandes
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Mantener el video local pero no subirlo a GitHub
+# videoTesis.mp4
+
