@@ -285,6 +285,8 @@ body {
     margin-top: 0;
     cursor: default;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1000;
   }
 
   .contenido-demo h2 {
@@ -336,6 +338,8 @@ body {
     aspect-ratio: 16 / 9;
     border-radius: 8px;
     min-height: 400px;
+    display: block;
+    background-color: #000;
   }
 
   .demo-galeria {
