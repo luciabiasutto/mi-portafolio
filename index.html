@@ -30,7 +30,7 @@
 <body>
   <a class="skip-link" href="#inicio" data-i18n="skip">Saltar al contenido</a>
 
-  <header class="site-header" id="top">
+  <header class="site-header">
     <nav class="nav" aria-label="Navegación principal" data-i18n-aria="navAria">
       <a class="nav-brand" href="#inicio">Lucía Biasutto</a>
 
@@ -394,7 +394,7 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <p>© <span id="year"></span> Lucía Antonella Biasutto</p>
-      <a href="#top" data-i18n="backTop">Volver arriba</a>
+      <a href="#inicio" class="back-to-top" data-i18n="backTop">Volver arriba</a>
     </div>
   </footer>
 
@@ -806,6 +806,12 @@
         navToggle?.setAttribute('aria-expanded', 'false');
         navToggle?.setAttribute('aria-label', translations[currentLang].menuOpen);
       });
+    });
+
+    document.querySelector('.back-to-top')?.addEventListener('click', (event) => {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      history.replaceState(null, '', '#inicio');
     });
 
     window.addEventListener('scroll', () => {
